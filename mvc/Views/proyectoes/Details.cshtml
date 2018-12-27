@@ -1,0 +1,42 @@
+﻿@model mvc.Entity.proyecto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>proyecto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.clientes.nombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientes.nombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tickets.tickets1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tickets.tickets1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreProyecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreProyecto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.proyecto1 }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

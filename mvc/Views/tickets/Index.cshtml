@@ -1,0 +1,45 @@
+﻿@model IEnumerable<mvc.Entity.tickets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.precios.precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precios1.precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precios2.precio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.precios.precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precios1.precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precios2.precio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.tickets1 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.tickets1 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.tickets1 })
+        </td>
+    </tr>
+}
+
+</table>
